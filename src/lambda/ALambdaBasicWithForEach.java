@@ -13,6 +13,7 @@ public class ALambdaBasicWithForEach {
 
 	        // here Lambda expression is used directly on collections, here it implements consumer functional interface
 	        // Using lambda expression to print all elements of arrL
+		// forEach The forEach() method takes a Consumer functional interface as a parameter. However, because of lambda expressions, you can pass a lambda expression as an argument to the forEach() method, and Java will automatically convert it to a Consumer instance.
 	        arrL.forEach(n -> System.out.println(n));
 
 	        // Using lambda expression to print even elements
