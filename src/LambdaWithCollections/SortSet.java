@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 public class SortSet {
 
 	public static void main(String[] args) {
+		// if argument string("hi") is lexicographically higher, returns -1
+		System.out.println("app".compareTo("hi"));
+
+		//apply lambda function when declaring the collection in it's argument only -->TreeSet ts = new TreeSet<>(Lambda Expression to add sorting logic)
 		TreeSet<String> ts = new TreeSet<String>(
 				(String s1,String s2)->{
 					if(s1.compareTo(s2) == 1) {
