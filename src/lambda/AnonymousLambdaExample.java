@@ -12,6 +12,10 @@ interface myInterface1{
 	void show(int x, int y, int z);
 }
 
+// abstract function with return type
+interface myInterface2{
+	int showFactorial(int xx);
+}
 
 public class AnonymousLambdaExample {
 
@@ -37,7 +41,20 @@ public class AnonymousLambdaExample {
 			}
 		};
 		m2.show(5, 1, 10);
-	
+
+		myInterface2 myInterface2 =(xx -> {if(xx<=5){
+			int fact = 1;
+			for(int i=1;i<=xx;i++){
+				fact = fact*i;
+			}
+			return fact;
+        }
+		else{
+			return (int)Math.pow(xx,1);
+		}});
+		myInterface2.showFactorial(5);
+		myInterface2.showFactorial(456);
+
 	}
 
 
