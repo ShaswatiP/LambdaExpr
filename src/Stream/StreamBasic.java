@@ -1,12 +1,13 @@
 package Stream;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamBasic {
-
 
 	public static void main(String[] args) {
 	
@@ -41,5 +42,19 @@ public class StreamBasic {
 		// map() -> applies some operation on each element and returns the results 
 		List<Integer> squares = num.stream().map(i -> i*i).collect(Collectors.toList());
 		System.out.println(squares);
+
+		num.stream().map(i -> i*i).forEach(integerNum -> System.out.println("squared :"+integerNum));
+
+		HashMap<Integer,List<Integer>> hm = new HashMap<>();
+		hm.put(0,num);
+		hm.put(2,even);
+		hm.keySet().stream().forEach(key ->System.out.println(key+" ---->"+hm.get(key)));
+		List<Integer> odd = new ArrayList<>();
+		odd.add(1);
+		odd.add(3);
+		odd.add(5);
+		hm.put(3,odd);
+		hm.values().stream().filter(al -> al.stream().anyMatch(x -> x % 2!=0)).forEach(al -> System.out.println("odd list :"+al));
+		hm.values().stream().filter(al -> al.stream().allMatch(x -> x % 2!=0)).forEach(al -> System.out.println("odd list :"+al));
 	}
 }
