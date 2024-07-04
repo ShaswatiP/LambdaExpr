@@ -17,7 +17,7 @@ public class ALambdaBasic {
 
 	public static void main(String args[]) {
 		// lambda expression to implement above functional interface. This interface
-		// by default implements abstractFun()
+		// by default implements abstractFun() and defines the function's body
 		FuncInterface fobj = (int x) -> System.out.println(2 * x);
 
 		// This calls above lambda expression and prints 10.

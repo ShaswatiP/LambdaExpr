@@ -28,20 +28,20 @@ public class AnonymousLambdaExample {
 		m1.show();
 		
 		
-		//below anonymous class has it's own implementation and definition of show(int,int,int)
+		//below anonymous class has its own implementation and definition of show(int,int,int)
 		myInterface1 m2 = (int x, int y, int z)->{
 			System.out.println("sum is :"+(x+y+z));
 		};
 		m2.show(5,10,15);
 		
-		//below anonymous class has it's own implementation and definition of show(int,int,int)
+		//below anonymous class has its own implementation and definition of show(int,int,int)
 		m2 =(int x, int y, int z)->{
 			for(int i = x;i<z;i=i+y) {
-				System.out.print(i);
+				System.out.print(i+" ");
 			}
 		};
 		m2.show(5, 1, 10);
-
+		System.out.println();
 		myInterface2 myInterface2 =(xx -> {if(xx<=5){
 			int fact = 1;
 			for(int i=1;i<=xx;i++){
@@ -52,8 +52,8 @@ public class AnonymousLambdaExample {
 		else{
 			return (int)Math.pow(xx,1);
 		}});
-		myInterface2.showFactorial(5);
-		myInterface2.showFactorial(456);
+		System.out.println(myInterface2.showFactorial(5));
+		System.out.println(myInterface2.showFactorial(456));
 
 	}
 

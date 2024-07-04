@@ -5,7 +5,7 @@ interface FuncInter1 {
 	int operation(int a, int b);
 }
 
-// sayMessage() is implemented using lambda expressions above
+// sayMessage() is implemented using lambda expressions below
 interface FuncInter2 {
 	void sayMessage(String message);
 }
@@ -49,6 +49,6 @@ public class ALambdaBasicWithMultipleArguments {
 		// This expression implements 'FuncInter2' interface
 		FuncInter2 fobj = message -> System.out.println("Hello " + message);
 
-		fobj.sayMessage("shas");
+		fobj.sayMessage("nitu");
 	}
 }

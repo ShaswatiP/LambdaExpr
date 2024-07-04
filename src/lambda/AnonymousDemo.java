@@ -24,14 +24,14 @@ class AnonymousDemo {
 			public void getAge() 
 			{ 
 				// printing age 
-				System.out.print("Age is " +30); 
+				System.out.println("Age is " +30);
 			} 
 		}; 
 		
 		oj1.getAge(); 
 		
 		Age oj2 = ()->{
-			System.out.print("Age is " +30); 
+			System.out.println("Age is " +30);
 		};
 		oj2.getAge();
 	} 

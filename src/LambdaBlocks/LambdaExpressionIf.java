@@ -7,8 +7,8 @@ interface New {
 	// Boolean function to check over
 	// natural number depicting calendar year
 
-	// 'n' deepicting year is
-	// passed as an parameter
+	// 'n' depicting year is
+	// passed as a parameter
 	boolean test(int n);
 }
 
@@ -26,7 +26,7 @@ public class LambdaExpressionIf {
 		{
 			// Condition check
 			// If year is divisible by 400 or the
-			// year is divisible by 4 and 100 both
+			// year is divisible by 4 and not 100
 			if (((year % 400 == 0)
 				|| (year % 4 == 0) && (year % 100 != 0)))
 
