@@ -36,7 +36,9 @@ public class StreamBasic {
 		// methods of Stream
 		// filter(), argument is a predicate
 		// filters out elements from the stream, which pass a certain condition/predicate argument
-		List<String> names = List.of("sha","shy","shu","shi","shd","bubu");
+		List<String> names = Arrays.asList("sha","shy","shu","shi","shd","bubu");
+		//List<String> names = List.of("sha","shy","shu","shi","shd","bubu");
+
 		names.stream().filter(e -> e.startsWith("b")).forEach(e -> System.out.println(e));
 		
 		// map() -> applies some operation on each element and returns the results 
